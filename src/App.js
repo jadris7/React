@@ -4,11 +4,11 @@ import { TodoCounter } from  './componentes/TodoCounter/TodoCounter';
 import { TodoSearch } from  './componentes/Todo_Search/TodoSearch';
 import { TodoList } from  './componentes/TodoList/TodoList';
 import { TodoItem } from  './componentes/TodoItem/TodoItem';
-import {CreateTodoButton}from './componentes/CreateCounter/CreateTodoButton';
+import {CreateTodoButton}from './componentes/CreateTodoButton/CreateTodoButton';
 
 const todos = [
   {text: 'Cortar cebolla', completed: false },
-  {text: 'Tomar el curso de intro a React', completed: false },
+  {text: 'Tomar el curso de intro a React', completed: true },
   {text: 'Llorar con la llorona', completed: false },
 ];
 
@@ -20,7 +20,11 @@ function App() {
       <TodoList>
         {/*iterar el array todos*/}
         {todos.map(todo =>(
-          <TodoItem  key={todo.text} text={todo.text}/>
+          <TodoItem
+          key={todo.text}
+          text={todo.text}
+          completed={todo.completed}
+          />
         ))}
       </TodoList>
       <CreateTodoButton/>     
