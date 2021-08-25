@@ -7,7 +7,7 @@ function TodoItem(props) {
         alert('Ya completaste la tarea \n\n' + props.text);
       };
       const onDelete = () => {
-        alert('Borraste la tarea \n\n' + props.text);
+        alert('Borraste la tarea de actividades \n\n' + props.text);
       };
 
     return (
